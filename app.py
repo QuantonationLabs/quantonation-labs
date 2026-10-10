@@ -48,5 +48,5 @@ with tabs[1]:
     st.caption('Exact 64-state six-spin local model, with interaction tails retained. Model parameters define this example; no measurements are included in the public edition.')
 with tabs[2]:
     architecture()
-    st.write('The proposed system coordinates scientific tools and specialist agents through Prefect and durable task records. GitHub holds reviewed specifications and knowledge; runtime state belongs in the registry.')
+    st.write('Every team member can use their preferred Claude, ChatGPT or another compatible assistant as the interface to the same Quantonation OS. Authenticated connections give access to shared tools and research workspaces. GitHub provides the versioned backbone for source, agent specifications and reviewed knowledge; the task registry holds runtime state. These client connections are the proposed architecture, not a deployed integration.')
     st.caption('Architecture illustration. The fund-owned implementation, evidence and credentials belong in a separate private deployment and repository.')

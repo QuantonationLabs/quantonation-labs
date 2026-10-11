@@ -25,13 +25,13 @@ PAPERS=[
 ]
 
 def render():
-    st.markdown('<div style="background:linear-gradient(115deg,#172046,#5335a8,#087f98);padding:26px 30px;border-radius:22px;color:white"><span style="font-size:12px;letter-spacing:2px;color:#a3ebff">QUANTONATION LABS · RESEARCH LIBRARY</span><h1 style="color:white;margin:10px 0;font-size:2.5rem">Papers & perspectives</h1><p style="color:#dbe5ff;margin:0">The published trail behind the experiments: literary structures, agentic quantum workflows and Nature coverage.</p></div>',unsafe_allow_html=True)
+    st.markdown('<div style="background:linear-gradient(115deg,#172046,#5335a8,#087f98);padding:20px 26px;border-radius:22px;color:white"><span style="font-size:12px;letter-spacing:2px;color:#a3ebff">QUANTONATION LABS · RESEARCH LIBRARY</span><h1 style="color:white;margin:10px 0;font-size:2rem">Papers & perspectives</h1><p style="color:#dbe5ff;margin:0">The published trail behind the experiments: literary structures, agentic quantum workflows and Nature coverage.</p></div>',unsafe_allow_html=True)
     st.write('Three references to open during the presentation or share with the team.')
     for col,p in zip(st.columns(3),PAPERS):
         with col,st.container(border=True):
-            st.markdown(f'<div style="height:105px;padding:20px;border-radius:14px;background:linear-gradient(120deg,#151d3b,{p["colour"]});color:white"><span style="font-size:10px;letter-spacing:1.5px">{p["kind"].upper()}</span><div style="font-size:25px;font-weight:700;margin-top:12px">{p["name"]}</div></div>',unsafe_allow_html=True)
+            st.markdown(f'<div style="min-height:105px;padding:16px;display:flex;flex-direction:column;gap:10px;border-radius:14px;background:linear-gradient(120deg,#151d3b,{p["colour"]});color:white"><span style="font-size:10px;line-height:1.3;letter-spacing:1px">{p["kind"].upper()}</span><div style="font-size:20px;line-height:1.25;font-weight:700">{p["name"]}</div></div>',unsafe_allow_html=True)
             st.caption(p['date']+' · '+p['id'])
-            st.markdown('### '+p['title'])
+            st.markdown(f'<h3 style="font-size:17px;line-height:1.4;margin:14px 0;overflow-wrap:normal">{p["title"]}</h3>',unsafe_allow_html=True)
             st.caption(p['authors'])
             st.write(p['summary'])
             st.link_button('Open '+('Nature article ↗' if p['name']=='Nature' else 'paper on arXiv ↗'),p['url'],width='stretch')

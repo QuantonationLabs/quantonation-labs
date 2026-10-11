@@ -29,7 +29,7 @@ with st.sidebar:
 st.image(str(ROOT/'assets/quantonation-labs.svg'),width=340)
 st.markdown('<div class="hero"><span>SCIENCE · MACHINES · COLLECTIVE INTELLIGENCE</span><h1>Quantum research, orchestrated.</h1><p>Explore quantum control, exact predictions and the architecture of a coordinated research desk.</p></div>',unsafe_allow_html=True)
 quantum_stage()
-tabs=st.tabs(['Quantum control','Exact science','Quantonation OS'])
+tabs=st.tabs(['Quantum control','Exact science','Quantonation OS','Papers & perspectives'])
 with tabs[0]:
     area=st.slider('Pulse area / π',0.0,2.0,1.0,.05)
     p=float(np.sin(np.pi*area/2)**2)
@@ -50,3 +50,7 @@ with tabs[2]:
     architecture()
     st.write('Every team member can use their preferred Claude, ChatGPT or another compatible assistant as the interface to the same Quantonation OS. Authenticated connections give access to shared tools and research workspaces. GitHub provides the versioned backbone for source, agent specifications and reviewed knowledge; the task registry holds runtime state. These client connections are the proposed architecture, not a deployed integration.')
     st.caption('Architecture illustration. The fund-owned implementation, evidence and credentials belong in a separate private deployment and repository.')
+
+with tabs[3]:
+    from papers import render
+    render()

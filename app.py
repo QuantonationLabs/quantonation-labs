@@ -18,7 +18,7 @@ with st.sidebar:
     for title,asset,url,bg in [
         ('Theo','theo-icon.png','https://firstprinciples.com/','#e8e6ff'),
         ('PASQAL','pasqal-icon.png','https://portal.pasqal.cloud/','#e3faff'),
-        ('qBraid','qbraid-icon.png','https://lab.qbraid.com/','#ebe5ff'),
+        ('qBraid','qbraid-icon.png','https://account.qbraid.com/','#ebe5ff'),
         ('RunPod · GPUs','runpod.svg','https://console.runpod.io/','#eee5ff'),
         ('OpenRouter','openrouter.png','https://openrouter.ai/','#e2edff'),
         ('ChatGPT','openai.svg','https://chatgpt.com/','#def7ef'),
